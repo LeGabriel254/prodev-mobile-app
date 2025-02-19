@@ -3,6 +3,7 @@ import { SafeAreaView, SafeAreaProvider } from "react-native-safe-area-context";
 import { router, useRouter } from "expo-router";
 
 export default function Index() {
+  const router = useRouter();
   return (
     // entire app wrapped inside SafeAreaProvider and SafeAreaView to prevent UI overlap with device notches.
     <SafeAreaProvider>

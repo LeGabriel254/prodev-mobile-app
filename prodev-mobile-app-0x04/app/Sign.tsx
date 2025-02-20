@@ -2,14 +2,16 @@ import { Text, TextInput, View, TouchableOpacity, Image } from "react-native";
 import { styles } from "@/styles/signinStyles";
 import { SafeAreaView, SafeAreaProvider } from "react-native-safe-area-context";
 import { FontAwesome, Ionicons } from "@expo/vector-icons";
+import { useRouter } from "expo-router";
 
 export default function Index() {
+  const router = useRouter()
   return (
     <SafeAreaProvider>
       <SafeAreaView style={styles.container}>
         {/* arrow-back */}
         <View style={styles.navGroup}>
-          <Ionicons name="arrow-back" size={25} />
+          <Ionicons name="arrow-back" size={25} onPress={() => router.push("/")}/>
           <Image source={require('@/assets/images/logo-green.png')} />
         </View>
 
@@ -94,7 +96,7 @@ export default function Index() {
         {/* New users */}
         <View style={styles.subTextGroup}>
           <Text style={styles.subText}>Don't have an account?</Text>
-          <Text style={styles.subTextJoin}>Join now</Text>
+          <Text style={styles.subTextJoin} onPress={() => router.push("/join")}>Join now</Text>
         </View>
       </SafeAreaView>
     </SafeAreaProvider>

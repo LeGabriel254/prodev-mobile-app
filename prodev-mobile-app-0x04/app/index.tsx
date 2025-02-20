@@ -32,7 +32,7 @@ export default function Index() {
             <View style={{ position: "absolute", bottom: 0, width: "100%" }}>
               <View style={styles.buttonGroup}>
                 <TouchableOpacity style={styles.button}>
-                  <Text style={{ ...styles.textSmall, color: "black" }}>Join here</Text>
+                  <Text style={{ ...styles.textSmall, color: "black" }} onPress={() => router.push("/join")}>Join here</Text>
                 </TouchableOpacity>
 
                 <TouchableOpacity style={styles.transparentButton}>

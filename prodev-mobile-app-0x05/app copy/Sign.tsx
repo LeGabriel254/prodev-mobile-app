@@ -1,11 +1,12 @@
-import React from "react";
 import { Text, TextInput, View, TouchableOpacity, Image } from "react-native";
 import { styles } from "@/styles/signinStyles";
 import { SafeAreaView, SafeAreaProvider } from "react-native-safe-area-context";
 import { FontAwesome, Ionicons } from "@expo/vector-icons";
-import { router } from "expo-router";
+import { useRouter } from "expo-router";
+import React from "react";
 
 export default function Index() {
+  const router = useRouter()
   return (
     <SafeAreaProvider>
       <SafeAreaView style={styles.container}>
@@ -16,10 +17,10 @@ export default function Index() {
         </View>
 
         {/* Instruction */}
-        <Text style={styles.largeText}>Create Your</Text>
+        <Text style={styles.largeText}>Sign in to your</Text>
         <Text style={styles.largeText}>Account</Text>
         <Text style={styles.smallText}>
-          Enter new details to create a new account.
+          Enter your email and password to sign in.
         </Text>
 
         {/* Form Group */}
@@ -37,21 +38,13 @@ export default function Index() {
               <FontAwesome name="eye-slash" size={24} color="#7E7B7B" />
             </View>
           </View>
-
-           {/* Password */}
-           <View style={{ marginTop: 20 }}>
-            <Text style={styles.placeholderText}>Confirm Password</Text>
-            <View style={styles.passwordGroup}>
-              <TextInput style={{ flex: 1 }} />
-              <FontAwesome name="eye-slash" size={24} color="#7E7B7B" />
-            </View>
-          </View>
-       
+          {/* Forgot Password */}
+          <Text style={styles.forgotPasswordText}>Forgot password?</Text>
         </View>
 
         {/* Signing in Buttons */}
         <TouchableOpacity style={styles.button}>
-          <Text style={styles.buttonText}>Create</Text>
+          <Text style={styles.buttonText}>Sign in</Text>
         </TouchableOpacity>
 
         <View style={styles.dividerGroup}>
@@ -103,8 +96,8 @@ export default function Index() {
         
         {/* New users */}
         <View style={styles.subTextGroup}>
-          <Text style={styles.subText}>Have an account?</Text>
-          <Text style={styles.subTextJoin} onPress={() => router.push("/Sign")}>Sign in</Text>
+          <Text style={styles.subText}>Don't have an account?</Text>
+          <Text style={styles.subTextJoin} onPress={() => router.push("/join")}>Join now</Text>
         </View>
       </SafeAreaView>
     </SafeAreaProvider>

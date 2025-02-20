@@ -1,9 +1,9 @@
-import React from "react";
 import { Text, TextInput, View, TouchableOpacity, Image } from "react-native";
 import { styles } from "@/styles/signinStyles";
 import { SafeAreaView, SafeAreaProvider } from "react-native-safe-area-context";
 import { FontAwesome, Ionicons } from "@expo/vector-icons";
 import { router } from "expo-router";
+import React from "react";
 
 export default function Index() {
   return (

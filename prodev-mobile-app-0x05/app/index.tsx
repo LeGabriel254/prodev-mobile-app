@@ -3,7 +3,6 @@ import { SafeAreaView, SafeAreaProvider } from "react-native-safe-area-context";
 import { router, useRouter } from "expo-router";
 import React from "react";
 
-
 export default function Index() {
   const router = useRouter();
   return (

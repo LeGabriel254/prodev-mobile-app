@@ -118,5 +118,11 @@ export const styles = StyleSheet.create({
   bottomNavItem: {
     alignItems: "center",
   },
+  filterImage: {
+    width: 30,
+    height: 30,
+    marginBottom: 2, // Space between image and text
+    flex:1
+  },
 });
 

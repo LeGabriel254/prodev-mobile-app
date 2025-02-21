@@ -41,13 +41,14 @@ const Home = () => {
             {FILTERS.map((filter, index) => (
               <View style={styles.filterContainer} key={index}>
                 <Image
-                  style={{
-                    flex: 1,
-                  }}
-                  source={require("@/assets/images/Logo.png")}
+                  // style={{
+                  //   flex: 1,
+                  // }}
+                  style={styles.filterImage}
+                  source={filter.image}
                   resizeMode="contain"
                 />
-                <Text>{filter}</Text>
+                <Text>{filter.name}</Text>
               </View>
             ))}
           </View>

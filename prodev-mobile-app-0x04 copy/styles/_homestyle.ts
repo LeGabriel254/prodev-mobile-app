@@ -26,7 +26,7 @@ export const styles = StyleSheet.create({
   },
   searchFormText: {
     fontSize: 16,
-    color: "#333",
+    color: "#334",
   },
   searchControl: {
     fontSize: 14,

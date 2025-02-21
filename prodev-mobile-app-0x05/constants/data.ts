@@ -1,4 +1,5 @@
 import { PropertyListingProps } from "@/interfaces";
+import { ImageSourcePropType } from "react-native";
 
 const SAMPLE_DATA : PropertyListingProps[] = [
     {
@@ -123,19 +124,29 @@ const SAMPLE_DATA : PropertyListingProps[] = [
     }
   ];
 
+  type FilterItem = {
+    name: string;
+    image: ImageSourcePropType;
+  };
 
-const FILTERS: string [] = [
-    "Mansion",
-    "CountrySide",
-    "Villa",
-    "Tropical",
-    "New",
-    "Amazing",
-    "Beachfront",
-    "Luxury",
-    "Family-Friendly",
-    "Pet-Friendly",
-    "Secluded"
-  ];
+const FILTERS: FilterItem[] = [
+  { name: "Mansion", image: require("@/assets/images/mansion.png") },
+  { name: "CountrySide", image: require("@/assets/images/mansion.png") },
+  { name: "Villa", image: require("@/assets/images/mansion.png") },
+  { name: "Tropical", image: require("@/assets/images/mansion.png") },
+  { name: "New", image: require("@/assets/images/mansion.png") },
+  { name: "Amazing pool", image: require("@/assets/images/mansion.png") },
+  { name: "Beach house", image: require("@/assets/images/mansion.png") },
+  { name: "Island", image: require("@/assets/images/mansion.png") },
+  { name: "Camping", image: require("@/assets/images/mansion.png") },
+  { name: "Apartment", image: require("@/assets/images/mansion.png") },
+  { name: "House", image: require("@/assets/images/mansion.png") },
+  { name: "Lakefront", image: require("@/assets/images/mansion.png") },
+  { name: "Apartment", image: require("@/assets/images/mansion.png") },
+  { name: "Treehouse", image: require("@/assets/images/tree.png") },
+  { name: "Cabins", image: require("@/assets/images/mansion.png") },
+  { name: "Castles", image: require("@/assets/images/mansion.png") },
+  { name: "Lakeside", image: require("@/assets/images/mansion.png") },
+];
 
   export { SAMPLE_DATA, FILTERS }
